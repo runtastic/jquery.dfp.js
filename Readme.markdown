@@ -168,6 +168,10 @@ Available Options
         <td>This string is your unique DFP account ID.</td>
     </tr>
     <tr>
+        <td>pageUrl</td>
+        <td>This string is the url used by the Google crawler. If ads are requested from a page that can only be accessed authed the crawler can't access it. Then it's useful to set this option so the crawler knows what to scrape instead.</td>
+    </tr>
+    <tr>
         <td>setTargeting</td>
         <td>This object is where you set custom targeting key value pairs. Also see the Default Targeting options that are set further down the page.</td>
     </tr>
