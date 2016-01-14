@@ -106,7 +106,8 @@
                 disableInitialLoad: false,
                 noFetch: false,
                 namespace: undefined,
-                sizeMapping: {}
+                sizeMapping: {},
+                pageUrl: undefined
             };
 
             if (typeof options.setUrlTargeting === 'undefined' || options.setUrlTargeting) {
@@ -246,6 +247,10 @@
 
                 if (dfpOptions.enableSingleRequest) {
                     pubadsService.enableSingleRequest();
+                }
+
+                if (dfpOptions.pageUrl) {
+                    pubadsService.set('page_url', dfpOptions.pageUrl);
                 }
 
                 $.each(dfpOptions.setTargeting, function (k, v) {
