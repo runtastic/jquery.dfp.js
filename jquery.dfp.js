@@ -14,16 +14,8 @@
      * Uses CommonJS, AMD or browser globals to create plugin.
      */
     (function (factory) {
-        if (typeof define === 'function' && define.amd) {
-            // AMD. Register as an anonymous module.
-            define(['jquery'], factory);
-        } else if (typeof exports === 'object') {
-            // Node/CommonJS
-            factory(require('jquery'));
-        } else {
-            // Browser globals
-            factory(window.jQuery || window.Zepto);
-        }
+        // Always inject into global jQuery Instance to be able to use with Ember
+        factory(window.jQuery || window.Zepto);
     }(function ($) {
 
         var
